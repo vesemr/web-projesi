@@ -1,0 +1,128 @@
+/* 1. Genel Ayarlar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ANA DEĞİŞİKLİK: Arkaplan Siyah, Yazılar Turuncu */
+body {
+    background-color: #000000; 
+    color: #ffa500; 
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff8c00; /* Başlık için biraz daha koyu/canlı bir turuncu */
+}
+
+/* 2. Ana Taşıyıcı */
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. Bölüm Tasarımları (Kartlar) */
+.notes-section, .todo-section {
+    flex: 1;
+    /* Simsiyah ekranda kartların belli olması için çok koyu bir gri kullanıyoruz */
+    background-color: #1a1a1a; 
+    padding: 25px;
+    border: 1px solid #ffa500; /* Turuncu çerçeve eklendi */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.15); /* Hafif turuncu gölge parlaması */
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffa500; 
+    padding-bottom: 10px;
+    color: #ffa500;
+}
+
+/* 4. Form Elemanları (Input ve Butonlar) */
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000; /* Yazı yazılan alanın içi de siyah */
+    color: #ffa500; /* Yazdığın yazılar turuncu */
+    border: 1px solid #ffa500;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]::placeholder, textarea::placeholder {
+    color: #b37400; /* Tıklanmamış ipucu yazıları biraz soluk turuncu */
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #ffcc00; /* Odaklanınca kenarlık sarımsı-turuncu parlar */
+}
+
+/* Ekle Butonları */
+button {
+    padding: 12px;
+    background-color: #ffa500; /* Turuncu buton */
+    color: #000000; /* Buton üstündeki yazı siyah */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc8400; /* Üzerine gelince biraz koyulaşan turuncu */
+}
+
+/* 5. Listeler ve Elemanlar */
+.list-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a; /* Liste elemanları karttan bir tık daha açık gri */
+    padding: 15px;
+    border-left: 4px solid #ffa500;
+    border-radius: 4px;
+    color: #ffa500;
+}
+
+/* Sil Butonu (Uyum için Kırmızı/Turuncu arası bırakıldı) */
+.delete-btn {
+    background-color: #cc3300; 
+    color: #ffffff;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background-color: #ff3300;
+}
+
+/* Tamamlanan Görevler */
+.completed {
+    text-decoration: line-through;
+    color: #666666; /* Tamamlananların yazısı soluk griye döner */
+    border-left-color: #666666;
+}

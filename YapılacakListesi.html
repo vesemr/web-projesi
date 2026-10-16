@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not ve Görev Yöneticisi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kişisel Yöneticim</h1>
+    </header>
+
+    <main class="container">
+        
+        <!-- Sol Taraf: Notlar -->
+        <section class="notes-section">
+            <h2>Notlar</h2>
+            <div class="input-area">
+                <input type="text" id="note-title" placeholder="Not Başlığı">
+                <textarea id="note-content" placeholder="Notunuzu buraya yazın..." rows="3"></textarea>
+                <button id="add-note-btn">Not Ekle</button>
+            </div>
+            
+            <!-- Eklenen notların listeleneceği alan -->
+            <div id="notes-list" class="list-container">
+                <!-- JavaScript buraya not kartlarını ekleyecek -->
+            </div>
+        </section>
+
+        <!-- Sağ Taraf: Yapılacaklar -->
+        <section class="todo-section">
+            <h2>Yapılacaklar</h2>
+            <div class="input-area">
+                <input type="text" id="todo-input" placeholder="Yeni bir görev ekle...">
+                <button id="add-todo-btn">Ekle</button>
+            </div>
+            
+            <!-- Eklenen görevlerin listeleneceği alan -->
+            <ul id="todo-list" class="list-container">
+                <!-- JavaScript buraya <li> etiketlerini ekleyecek -->
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
