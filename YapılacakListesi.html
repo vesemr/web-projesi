@@ -1,50 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not ve Görev Yöneticisi</title>
+    <title>FitLife - Fitness Rehberi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Menü -->
     <header>
-        <h1>Kişisel Yöneticim</h1>
+        <h1>FIT<span>LIFE</span></h1>
+
+        <nav>
+            <a href="#anasayfa">Ana Sayfa</a>
+            <a href="#antrenman">Antrenmanlar</a>
+            <a href="#beslenme">Beslenme</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
     </header>
 
-    <main class="container">
-        
-        <!-- Sol Taraf: Notlar -->
-        <section class="notes-section">
-            <h2>Notlar</h2>
-            <div class="input-area">
-                <input type="text" id="note-title" placeholder="Not Başlığı">
-                <textarea id="note-content" placeholder="Notunuzu buraya yazın..." rows="3"></textarea>
-                <button id="add-note-btn">Not Ekle</button>
-            </div>
-            
-            <!-- Eklenen notların listeleneceği alan -->
-            <div id="notes-list" class="list-container">
-                <!-- JavaScript buraya not kartlarını ekleyecek -->
-            </div>
-        </section>
+    <!-- Ana Sayfa -->
+    <section id="anasayfa" class="hero">
+        <h2>Güçlü Bir Vücut, Sağlıklı Bir Yaşam!</h2>
+        <p>Fitness yolculuğuna bugün başla.</p>
+        <a href="#antrenman" class="btn">Antrenmanları Keşfet</a>
+    </section>
 
-        <!-- Sağ Taraf: Yapılacaklar -->
-        <section class="todo-section">
-            <h2>Yapılacaklar</h2>
-            <div class="input-area">
-                <input type="text" id="todo-input" placeholder="Yeni bir görev ekle...">
-                <button id="add-todo-btn">Ekle</button>
+    <!-- Antrenmanlar -->
+    <section id="antrenman">
+        <h2>Antrenman Programları</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Göğüs Antrenmanı</h3>
+                <p>Bench Press, Şınav ve Dumbbell Press.</p>
             </div>
-            
-            <!-- Eklenen görevlerin listeleneceği alan -->
-            <ul id="todo-list" class="list-container">
-                <!-- JavaScript buraya <li> etiketlerini ekleyecek -->
-            </ul>
-        </section>
 
-    </main>
+            <div class="card">
+                <h3>Kol Antrenmanı</h3>
+                <p>Biceps Curl, Hammer Curl ve Triceps.</p>
+            </div>
 
-    <script src="app.js"></script>
+            <div class="card">
+                <h3>Bacak Antrenmanı</h3>
+                <p>Squat, Leg Press ve Lunge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beslenme -->
+    <section id="beslenme">
+        <h2>Sağlıklı Beslenme</h2>
+        <p>
+            Kas gelişimi ve sağlıklı yaşam için dengeli beslen,
+            yeterli protein al ve su tüketimini ihmal etme.
+        </p>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim">
+        <h2>Bize Ulaşın</h2>
+
+        <form id="iletisimFormu">
+            <input type="text" id="isim" placeholder="Adınız" required>
+            <input type="email" id="email" placeholder="E-posta adresiniz" required>
+            <textarea id="mesaj" placeholder="Mesajınız" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </section>
+
+    <!-- Alt Bilgi -->
+    <footer>
+        <p>© 2026 FitLife | Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
